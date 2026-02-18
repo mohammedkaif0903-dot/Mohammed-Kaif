@@ -2,11 +2,22 @@
 
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Phone, Linkedin, Github, Loader2, CheckCircle2 } from "lucide-react";
+import {
+  Send,
+  Mail,
+  MapPin,
+  Phone,
+  Linkedin,
+  Github,
+  Loader2,
+  CheckCircle2,
+} from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function ContactSection() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
   const [errorMessage, setErrorMessage] = useState("");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -44,7 +55,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative py-24 px-6">
+    <section id="contact" className="relative py-24 px-2 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           label="Contact"
@@ -62,16 +73,24 @@ export default function ContactSection() {
             className="md:col-span-2 space-y-6"
           >
             <div className="glass rounded-2xl p-6 md:p-8 space-y-6">
-              <h3 className="text-white font-bold text-xl mb-6">Get in Touch</h3>
+              <h3 className="text-white font-bold text-xl mb-6">
+                Get in Touch
+              </h3>
 
-              <a href="mailto:mohammedkaif0903@gmail.com" className="flex items-center gap-4 text-base md:text-lg text-white/50 hover:text-[#00D4FF] transition-colors group">
+              <a
+                href="mailto:mohammedkaif0903@gmail.com"
+                className="flex items-center gap-4 text-base md:text-lg text-white/50 hover:text-[#00D4FF] transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-[#00D4FF]/10 border border-[#00D4FF]/20 flex items-center justify-center group-hover:bg-[#00D4FF]/20 transition-colors">
                   <Mail size={18} className="text-[#00D4FF]" />
                 </div>
                 mohammedkaif0903@gmail.com
               </a>
 
-              <a href="tel:+919360449767" className="flex items-center gap-4 text-base md:text-lg text-white/50 hover:text-[#00D4FF] transition-colors group">
+              <a
+                href="tel:+919360449767"
+                className="flex items-center gap-4 text-base md:text-lg text-white/50 hover:text-[#00D4FF] transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-[#7B61FF]/10 border border-[#7B61FF]/20 flex items-center justify-center group-hover:bg-[#7B61FF]/20 transition-colors">
                   <Phone size={18} className="text-[#7B61FF]" />
                 </div>
@@ -89,9 +108,19 @@ export default function ContactSection() {
             {/* Social */}
             <div className="flex gap-4">
               {[
-                { icon: Linkedin, href: "https://www.linkedin.com/in/mohammed-kaif-87b8ab271", color: "#00D4FF", label: "LinkedIn" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/mohammed-kaif-87b8ab271",
+                  color: "#00D4FF",
+                  label: "LinkedIn",
+                },
                 { icon: Github, href: "#", color: "#7B61FF", label: "GitHub" },
-                { icon: Mail, href: "mailto:mohammedkaif0903@gmail.com", color: "#00FFB2", label: "Email" },
+                {
+                  icon: Mail,
+                  href: "mailto:mohammedkaif0903@gmail.com",
+                  color: "#00FFB2",
+                  label: "Email",
+                },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -119,9 +148,15 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             className="md:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 md:p-8 space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="glass rounded-2xl p-6 md:p-8 space-y-6"
+            >
               <div>
-                <label htmlFor="name" className="text-sm text-white/40 font-mono uppercase tracking-wider mb-2 block font-bold">
+                <label
+                  htmlFor="name"
+                  className="text-sm text-white/40 font-mono uppercase tracking-wider mb-2 block font-bold"
+                >
                   Name
                 </label>
                 <input
@@ -134,7 +169,10 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="text-sm text-white/40 font-mono uppercase tracking-wider mb-2 block font-bold">
+                <label
+                  htmlFor="email"
+                  className="text-sm text-white/40 font-mono uppercase tracking-wider mb-2 block font-bold"
+                >
                   Email
                 </label>
                 <input
@@ -147,7 +185,10 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="text-sm text-white/40 font-mono uppercase tracking-wider mb-2 block font-bold">
+                <label
+                  htmlFor="message"
+                  className="text-sm text-white/40 font-mono uppercase tracking-wider mb-2 block font-bold"
+                >
                   Message
                 </label>
                 <textarea
@@ -167,7 +208,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className={`w-full flex items-center justify-center gap-3 py-4 rounded-lg bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] text-black font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] transition-all duration-300 disabled:opacity-70 ${status === 'error' ? 'opacity-50' : ''}`}
+                className={`w-full flex items-center justify-center gap-3 py-4 rounded-lg bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] text-black font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.2)] transition-all duration-300 disabled:opacity-70 ${status === "error" ? "opacity-50" : ""}`}
               >
                 {status === "idle" && (
                   <>

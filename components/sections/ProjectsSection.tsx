@@ -32,7 +32,12 @@ const projects: Project[] = [
       "Export Functionality",
     ],
     tools: ["Postman", "Redmine", "Excel", "Sauce Labs"],
-    strategies: ["Black Box Testing", "Exploratory Testing", "Smoke & Sanity", "Regression Suite"],
+    strategies: [
+      "Black Box Testing",
+      "Exploratory Testing",
+      "Smoke & Sanity",
+      "Regression Suite",
+    ],
     highlights: [
       "Ensured all features worked as intended",
       "Validated new feature updates",
@@ -54,7 +59,12 @@ const projects: Project[] = [
       "Edge Case Validation",
     ],
     tools: ["Sauce Labs", "Postman", "Redmine", "Excel"],
-    strategies: ["Integration Testing", "Cross-Browser Matrix", "Payment Flow Testing", "Boundary Value Analysis"],
+    strategies: [
+      "Integration Testing",
+      "Cross-Browser Matrix",
+      "Payment Flow Testing",
+      "Boundary Value Analysis",
+    ],
     highlights: [
       "Ensured compatibility across devices",
       "Validated booking and payment flows",
@@ -75,7 +85,12 @@ const projects: Project[] = [
       "Global Brand Support",
     ],
     tools: ["Postman", "Redmine", "Excel", "Google Docs"],
-    strategies: ["NLP Testing", "Conversational Testing", "Globalization Testing", "Regression"],
+    strategies: [
+      "NLP Testing",
+      "Conversational Testing",
+      "Globalization Testing",
+      "Regression",
+    ],
     highlights: [
       "Validated chatbot responses across multiple languages",
       "Identified gaps in fallback conversation handling",
@@ -84,7 +99,13 @@ const projects: Project[] = [
   },
 ];
 
-function ProjectCard({ project, onClick }: { project: Project; onClick: () => void }) {
+function ProjectCard({
+  project,
+  onClick,
+}: {
+  project: Project;
+  onClick: () => void;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -107,14 +128,24 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
         <div className="relative z-10">
           <div className="flex items-start justify-between mb-4">
             <span className="text-4xl">{project.icon}</span>
-            <ExternalLink size={20} className="text-white/20 group-hover:text-[#00D4FF]/60 transition-colors" />
+            <ExternalLink
+              size={20}
+              className="text-white/20 group-hover:text-[#00D4FF]/60 transition-colors"
+            />
           </div>
 
-          <h3 className="text-2xl font-bold text-white mb-1.5">{project.title}</h3>
-          <p className="text-sm font-mono uppercase tracking-wider mb-4 font-medium" style={{ color: project.color + "99" }}>
+          <h3 className="text-2xl font-bold text-white mb-1.5">
+            {project.title}
+          </h3>
+          <p
+            className="text-sm font-mono uppercase tracking-wider mb-4 font-medium"
+            style={{ color: project.color + "99" }}
+          >
             {project.tagline}
           </p>
-          <p className="text-white/60 text-base leading-relaxed mb-6 line-clamp-3">{project.description}</p>
+          <p className="text-white/60 text-base leading-relaxed mb-6 line-clamp-3">
+            {project.description}
+          </p>
 
           {/* Tools */}
           <div className="flex flex-wrap gap-2 mb-4">
@@ -131,8 +162,15 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
           {/* Testing areas preview */}
           <div className="flex flex-wrap gap-2">
             {project.testingAreas.slice(0, 4).map((area) => (
-              <div key={area} className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-white/5 border border-white/5 text-xs text-white/50">
-                <CheckCircle2 size={12} className="flex-shrink-0" style={{ color: project.color + "80" }} />
+              <div
+                key={area}
+                className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-white/5 border border-white/5 text-xs text-white/50"
+              >
+                <CheckCircle2
+                  size={12}
+                  className="flex-shrink-0"
+                  style={{ color: project.color + "80" }}
+                />
                 <span>{area}</span>
               </div>
             ))}
@@ -148,7 +186,13 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
   );
 }
 
-function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
+function ProjectModal({
+  project,
+  onClose,
+}: {
+  project: Project;
+  onClose: () => void;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -169,8 +213,13 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           <div className="flex items-center gap-5">
             <span className="text-5xl">{project.icon}</span>
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-1">{project.title}</h3>
-              <p className="text-base font-mono bg-white/5 px-2 py-1 rounded inline-block" style={{ color: project.color }}>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-1">
+                {project.title}
+              </h3>
+              <p
+                className="text-base font-mono bg-white/5 px-2 py-1 rounded inline-block"
+                style={{ color: project.color }}
+              >
                 {project.tagline}
               </p>
             </div>
@@ -183,7 +232,9 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           </button>
         </div>
 
-        <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 border-b border-white/5 pb-8">{project.description}</p>
+        <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 border-b border-white/5 pb-8">
+          {project.description}
+        </p>
 
         {/* Testing Areas */}
         <div className="mb-8">
@@ -192,7 +243,10 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           </h4>
           <div className="space-y-3">
             {project.testingAreas.map((area) => (
-              <div key={area} className="flex items-center gap-3 text-base text-white/80">
+              <div
+                key={area}
+                className="flex items-center gap-3 text-base text-white/80"
+              >
                 <CheckCircle2 size={18} style={{ color: project.color }} />
                 {area}
               </div>
@@ -210,7 +264,10 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
               <span
                 key={s}
                 className="px-3.5 py-1.5 text-sm rounded-lg border text-white/70"
-                style={{ borderColor: project.color + "30", backgroundColor: project.color + "08" }}
+                style={{
+                  borderColor: project.color + "30",
+                  backgroundColor: project.color + "08",
+                }}
               >
                 {s}
               </span>
@@ -242,8 +299,14 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           </h4>
           <div className="space-y-3">
             {project.highlights.map((h) => (
-              <div key={h} className="flex items-start gap-3 text-base text-white/60">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: project.color }} />
+              <div
+                key={h}
+                className="flex items-start gap-3 text-base text-white/60"
+              >
+                <span
+                  className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: project.color }}
+                />
                 {h}
               </div>
             ))}
@@ -258,7 +321,7 @@ export default function ProjectsSection() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="relative py-24 px-6">
+    <section id="projects" className="relative py-24 px-2 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           label="Projects"
@@ -278,7 +341,9 @@ export default function ProjectsSection() {
       </div>
 
       <AnimatePresence>
-        {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
+        {selected && (
+          <ProjectModal project={selected} onClose={() => setSelected(null)} />
+        )}
       </AnimatePresence>
     </section>
   );

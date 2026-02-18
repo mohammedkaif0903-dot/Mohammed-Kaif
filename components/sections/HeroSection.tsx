@@ -15,7 +15,7 @@ export default function HeroSection() {
   const typedText = useTypingAnimation(roles, 70, 35, 1800);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pb-32">
+    <section className="relative min-h-screen flex items-center justify-center px-2 sm:px-6 overflow-hidden pb-32">
       {/* Radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D4FF]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-[#7B61FF]/5 rounded-full blur-[100px] pointer-events-none" />
@@ -75,7 +75,10 @@ export default function HeroSection() {
             className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] text-black font-semibold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-300"
           >
             View Projects
-            <ArrowDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
+            <ArrowDown
+              size={18}
+              className="group-hover:translate-y-0.5 transition-transform"
+            />
           </a>
           <a
             href="/MOHAMMEDKAIF-CV.pdf"
@@ -95,7 +98,6 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Scroll indicator */}
-
       </div>
       <motion.div
         initial={{ opacity: 0 }}

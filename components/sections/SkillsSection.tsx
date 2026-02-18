@@ -2,11 +2,34 @@
 
 import { motion } from "framer-motion";
 import {
-  Bug, FileSearch, BarChart3, Layers, Globe, Cpu,
-  FileText, ListChecks, ClipboardList, FileBarChart,
-  Wrench, FlaskConical, Mail, Table2, PenTool, FileSpreadsheet,
-  GitBranch, Repeat, Triangle, Zap, Workflow,
-  Box, UserCheck, Compass, CheckSquare, Scroll, CheckCircle2, Rocket,
+  Bug,
+  FileSearch,
+  BarChart3,
+  Layers,
+  Globe,
+  Cpu,
+  FileText,
+  ListChecks,
+  ClipboardList,
+  FileBarChart,
+  Wrench,
+  FlaskConical,
+  Mail,
+  Table2,
+  PenTool,
+  FileSpreadsheet,
+  GitBranch,
+  Repeat,
+  Triangle,
+  Zap,
+  Workflow,
+  Box,
+  UserCheck,
+  Compass,
+  CheckSquare,
+  Scroll,
+  CheckCircle2,
+  Rocket,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -78,7 +101,7 @@ const categories = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="relative py-24 px-6">
+    <section id="skills" className="relative py-24 px-2 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           label="Skills"
@@ -99,7 +122,10 @@ export default function SkillsSection() {
               <div className="flex items-center gap-4 mb-6">
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ backgroundColor: cat.color + "15", border: `1px solid ${cat.color}25` }}
+                  style={{
+                    backgroundColor: cat.color + "15",
+                    border: `1px solid ${cat.color}25`,
+                  }}
                 >
                   <cat.icon size={24} style={{ color: cat.color }} />
                 </div>
@@ -131,8 +157,6 @@ export default function SkillsSection() {
             </motion.div>
           ))}
         </div>
-
-
       </div>
     </section>
   );

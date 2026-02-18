@@ -68,7 +68,7 @@ export default function ExperienceSection() {
               end: "bottom 20%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
 
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
               end: "bottom 40%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       }
     };
@@ -101,7 +101,11 @@ export default function ExperienceSection() {
   }, []);
 
   return (
-    <section id="experience" className="relative py-24 px-6" ref={sectionRef}>
+    <section
+      id="experience"
+      className="relative py-24 px-2 sm:px-6"
+      ref={sectionRef}
+    >
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           label="Experience"
@@ -111,30 +115,32 @@ export default function ExperienceSection() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="timeline-line absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#00D4FF]/40 via-[#7B61FF]/30 to-transparent origin-top" />
+          <div className="timeline-line absolute left-2 sm:left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#00D4FF]/40 via-[#7B61FF]/30 to-transparent origin-top" />
 
           <div className="space-y-12">
             {experiences.map((exp, i) => (
               <div
                 key={exp.company}
-                className={`timeline-item relative flex flex-col md:flex-row gap-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                className={`timeline-item relative flex flex-col md:flex-row gap-8 ${
+                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
               >
                 {/* Dot */}
-                <div className="absolute left-6 md:left-1/2 top-6 -translate-x-1/2 z-10">
+                <div className="absolute left-2 sm:left-1/2 top-6 -translate-x-1/2 z-10">
                   <div
-                    className={`w-3 h-3 rounded-full border-2 ${exp.current
-                      ? "bg-[#00D4FF] border-[#00D4FF] shadow-[0_0_12px_rgba(0,212,255,0.5)]"
-                      : "bg-[#1E293B] border-[#7B61FF]/50"
-                      }`}
+                    className={`w-3 h-3 rounded-full border-2 ${
+                      exp.current
+                        ? "bg-[#00D4FF] border-[#00D4FF] shadow-[0_0_12px_rgba(0,212,255,0.5)]"
+                        : "bg-[#1E293B] border-[#7B61FF]/50"
+                    }`}
                   />
                 </div>
 
                 {/* Content */}
-                <div className={`flex-1 pl-14 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                  <motion.div
-                    className="glass rounded-2xl p-6 md:p-8 hover:shadow-[0_0_30px_rgba(0,212,255,0.06)] transition-all duration-300"
-                  >
+                <div
+                  className={`flex-1 pl-6 sm:pl-14 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}
+                >
+                  <motion.div className="glass rounded-2xl p-6 md:p-8 hover:shadow-[0_0_30px_rgba(0,212,255,0.06)] transition-all duration-300">
                     {exp.current && (
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono uppercase tracking-wider text-[#00D4FF] bg-[#00D4FF]/10 rounded-full border border-[#00D4FF]/20 mb-4">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#00D4FF] animate-pulse" />
@@ -142,23 +148,37 @@ export default function ExperienceSection() {
                       </span>
                     )}
 
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{exp.title}</h3>
-                    <div className={`flex items-center gap-3 mb-2 justify-start md:justify-end flex-wrap ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                      {exp.title}
+                    </h3>
+                    <div
+                      className={`flex items-center gap-3 mb-2 justify-start md:justify-end flex-wrap ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                    >
                       <div className="flex items-center gap-2">
                         <Briefcase size={16} className="text-[#7B61FF]/80" />
-                        <span className="text-base text-[#7B61FF] font-medium">{exp.company}</span>
+                        <span className="text-base text-[#7B61FF] font-medium">
+                          {exp.company}
+                        </span>
                       </div>
                       <span className="text-white/20">·</span>
-                      <span className="text-sm text-white/50">{exp.payroll}</span>
+                      <span className="text-sm text-white/50">
+                        {exp.payroll}
+                      </span>
                     </div>
-                    <div className={`flex items-center gap-2 mb-6 text-sm text-white/50 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
+                    <div
+                      className={`flex items-center gap-2 mb-6 text-sm text-white/50 ${i % 2 === 0 ? "md:justify-end" : ""}`}
+                    >
                       <Calendar size={14} />
                       {exp.period}
                     </div>
 
-                    <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">{exp.description}</p>
+                    <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
+                      {exp.description}
+                    </p>
 
-                    <div className={`flex flex-wrap gap-2 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
+                    <div
+                      className={`flex flex-wrap gap-2 ${i % 2 === 0 ? "md:justify-end" : ""}`}
+                    >
                       {exp.highlights.map((h) => (
                         <span
                           key={h}
