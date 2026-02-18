@@ -1,0 +1,7 @@
+{
+  "projectId": "2ae77a2d-1731-45c2-865a-202d8ff165f2",
+  "createdAt": 1771327124403,
+  "version": "1.0",
+  "startupCommands": ["npm.cmd install --prefix D:\\portfolio; npm.cmd run dev --prefix D:\\portfolio -- -p 3001"],
+  "templateId": "any"
+}

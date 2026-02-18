@@ -1,0 +1,48 @@
+2026-02-17T11:27:26.643Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:27:26.674Z [console][log] [Fast Refresh] done in 89ms
+2026-02-17T11:28:08.819Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:28:08.849Z [console][log] [Fast Refresh] done in 109ms
+2026-02-17T11:28:41.197Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:28:41.240Z [console][log] [Fast Refresh] done in 303ms
+2026-02-17T11:29:07.819Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:29:07.849Z [console][log] [Fast Refresh] done in 157ms
+2026-02-17T11:29:34.445Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:29:34.473Z [console][log] [Fast Refresh] done in 94ms
+2026-02-17T11:29:53.481Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:29:53.518Z [console][log] [Fast Refresh] done in 124ms
+2026-02-17T11:29:53.768Z [console][debug] __ORCHIDS_NAVIGATE__ http://localhost:3001/
+2026-02-17T11:30:10.788Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:30:11.696Z [console][log] [Fast Refresh] done in 1231ms
+2026-02-17T11:30:11.953Z [console][debug] __ORCHIDS_NAVIGATE__ http://localhost:3001/
+2026-02-17T11:30:31.374Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:30:31.527Z [console][log] [Fast Refresh] done in 254ms
+2026-02-17T11:30:48.138Z [console][log] [Fast Refresh] rebuilding
+2026-02-17T11:30:48.961Z [console][log] [Fast Refresh] done in 924ms
+2026-02-17T11:29:53.756Z [network][GET 200] 
+  response: 2:I["[project]/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"SegmentViewNode"]
+4:"$Sreact.fragment"
+14:I["[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"default"]
+16:I["[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"default"]
+2d:I["[project]/node_modules/next/dist/client/image-component.js [app-client] (ecmascript)",["/_next/static/chunks/app_layout_tsx_1cf6b850._.js","/_next/static/chunks/node_modules_next_dist_2c670af9._.js","/_next/static/chunks/app_page_tsx_a8c03fea._.js"],"Image"]
+3c:I["[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"OutletBoundary"]
+3e:"$Sreact.suspense"
+47:I["[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"ViewportBoundary"]
+4e:I["[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"MetadataBoundary"]
+:HL["/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css","style"]
+:N1771327793666.2986
+1:[]
+3:[]
+5:[["Array.map","",0,0,0,0,false]]
+6:[["Array.map","",0,0,0,0,false]]
+9:I["[project]/node_modules/next/dist/client/components/l... [truncated]
+2026-02-17T11:30:11.371Z [network][GET 200] 
+  response: 2:I["[project]/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"SegmentViewNode"]
+4:"$Sreact.fragment"
+14:I["[project]/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"default"]
+16:I["[project]/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"default"]
+22:I["[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)",["/_next/static/chunks/app_layout_tsx_1cf6b850._.js","/_next/static/chunks/node_modules_next_dist_02409dcd._.js","/_next/static/chunks/app_not-found_tsx_a8c03fea._.js"],""]
+28:I["[project]/node_modules/next/dist/client/components/client-page.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"ClientPageRoot"]
+29:I["[project]/app/page.tsx [app-client] (ecmascript)",["/_next/static/chunks/app_layout_tsx_1cf6b850._.js","/_next/static/chunks/components_84873075._.js","/_next/static/chunks/node_modules_338ca5f0._.js","/_next/static/chunks/_8916b5e1._.js","/_next/static/chunks/app_page_tsx_a8c03fea._.js"],"default"]
+31:I["[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/chunks/app_favicon_ico_mjs_745fddaf._.js"],"OutletBoundary"]
+33:"$Sreact.suspense"
+3c:I["[project]/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)",["/_next/static/chunks/node_modules_next_dist_be32b49c._.js","/_next/static/... [truncated]
