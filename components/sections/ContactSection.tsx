@@ -55,7 +55,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative py-24 px-2 sm:px-6">
+    <section id="contact" className="relative py-24 px-2 sm:px-6 overflow-x-hidden">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           label="Contact"

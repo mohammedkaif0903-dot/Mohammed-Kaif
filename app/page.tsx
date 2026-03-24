@@ -16,10 +16,9 @@ export default function Home() {
   return (
     <>
       <LoadingScreen />
-      
+
       {/* Rich static background for the whole page */}
       <div className="fixed inset-0 z-[-1] bg-[#0B0F19]">
-        {/* Subtle premium radial gradients */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,212,255,0.05),rgba(255,255,255,0))]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_80%_50%,rgba(123,97,255,0.05),rgba(255,255,255,0))]" />
       </div>
