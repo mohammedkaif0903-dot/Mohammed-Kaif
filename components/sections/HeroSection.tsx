@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { ArrowDown, FileText, Send } from "lucide-react";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
+import dynamic from "next/dynamic";
+
+const LiquidEther = dynamic(() => import("@/components/ui/LiquidEther"), { ssr: false });
 
 const roles = [
   "Manual Testing Expert",
@@ -11,11 +14,35 @@ const roles = [
   "API Testing with Postman",
 ];
 
+const LIQUID_ETHER_COLORS = [ '#5227FF', '#FF9FFC', '#B19EEF' ];
+
 export default function HeroSection() {
   const typedText = useTypingAnimation(roles, 70, 35, 1800);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-2 sm:px-6 overflow-hidden pb-32">
+      {/* Background Animations strictly for Hero */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <LiquidEther
+          className="w-full h-full opacity-60"
+          colors={LIQUID_ETHER_COLORS}
+          mouseForce={30}
+          cursorSize={120}
+          isViscous={false}
+          viscous={20}
+          iterationsViscous={40}
+          iterationsPoisson={40}
+          resolution={0.6}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.6}
+          autoIntensity={2.5}
+          takeoverDuration={0.2}
+          autoResumeDelay={2000}
+          autoRampDuration={0.8}
+        />
+      </div>
+
       {/* Radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D4FF]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-[#7B61FF]/5 rounded-full blur-[100px] pointer-events-none" />

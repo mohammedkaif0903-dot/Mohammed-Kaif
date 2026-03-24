@@ -125,6 +125,8 @@ export default function ContactSection() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/10 transition-all group"
                 >
                   <social.icon
